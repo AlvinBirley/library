@@ -126,12 +126,15 @@ margin-top: 10px;
 .shelf {
     width:1150px;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+   display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     border: 25px solid;
     border-radius: 360px 360px 360px 360px;
     border-image: repeating-linear-gradient(40deg, hsl(30, 50%, 15%), hsl(20, 50%, 30%), hsl(25, 40%, 20%) 8px) 60;
     margin-top: -70px;
+    margin-bottom: 20px;
     gap: 10px;
     padding: 10px;
 }
@@ -154,6 +157,8 @@ grid-template-rows: 1fr(repeat(4));
 
 .border {
     border: black 5px solid;
+    height:350px;
+    width:350px;
 }
 
 .space {
