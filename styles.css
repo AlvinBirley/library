@@ -38,7 +38,7 @@
     align-items: start;
 }
 
-.button {
+.press {
 background-color: rgb(255, 183, 0);
 color:white;
 border-radius: 30px;
@@ -54,6 +54,26 @@ border-color: rgb(201, 121, 0);
  font-size: 17px;
 margin-left: 10px;
 font-family: 'Tilt Prism', cursive;
+}
+
+.addThebook {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(235, 235, 235);
+color:white;
+border-radius: 30px;
+border-style: solid;
+ color: rgb(25, 24, 24);
+ text-align: center;
+ font-size: 28px;
+ font-weight: bold;
+ width: 80px;
+ height: 35px;
+ cursor: pointer;
+ font-size: 17px;
+font-family: 'Tilt Prism', cursive;
+border-color: rgb(12, 12, 12);
+margin-top: 10px;
 }
 
 .bg-modal{
@@ -92,26 +112,6 @@ input{
     width:50%;
     margin-left: 120px;
     display:block;
-}
-
-.submit {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(235, 235, 235);
-color:white;
-border-radius: 30px;
-border-style: solid;
- color: rgb(25, 24, 24);
- text-align: center;
- font-size: 28px;
- font-weight: bold;
- width: 80px;
- height: 35px;
- cursor: pointer;
- font-size: 17px;
-font-family: 'Tilt Prism', cursive;
-border-color: rgb(12, 12, 12);
-margin-top: 10px;
 }
 
 .close{
@@ -159,6 +159,26 @@ grid-template-rows: 1fr(repeat(4));
     border: black 5px solid;
     height:350px;
     width:350px;
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr;
+}
+
+.header-border {
+    border-bottom: black 5px solid;
+    font-size: 29px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 17.5px;
+}
+
+.border-center {
+    border-bottom: black 5px solid;
+    padding: 0 10px;
+}
+
+.border-footer {
+   display: grid;
+   grid-template-rows: 2fr 1fr;
 }
 
 .space {
@@ -173,4 +193,28 @@ th {
     line-height: 50px;
     font-size: 30px;
 
+}
+.remove-class {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(235, 235, 235);
+color:white;
+border-radius: 30px;
+border-style: solid;
+ color: rgb(25, 24, 24);
+ text-align: center;
+ font-size: 28px;
+ font-weight: bold;
+ width: 80px;
+ height: 35px;
+ cursor: pointer;
+ font-size: 17px;
+font-family: 'Tilt Prism', cursive;
+border-color: rgb(12, 12, 12);
+margin-top: 10px;
+}
+
+.book-id {
+    text-align: center;
+    padding-top: 3px;
 }

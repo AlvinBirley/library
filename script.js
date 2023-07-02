@@ -53,6 +53,14 @@ const newDivfooter = document.createElement("div");
 newDivfooter.classList.add("border-footer");
 newDiv.appendChild(newDivcenter);
 newDiv.appendChild(newDivfooter);
+const subFooter = document.createElement("div");
+const subFootertwo= document.createElement("div");
+subFootertwo.classList.add("book-id");
+newDivfooter.appendChild(subFooter);
+newDivfooter.appendChild(subFootertwo);
+let remove = document.createElement('BUTTON');
+remove.classList.add("remove-class");
+remove.innerHTML = "Remove";
 
 
 
@@ -96,11 +104,16 @@ function getValues (){
     paraThree.innerText = `Pages: ${resultThree.pages}`
     paraFour.innerText = `Completed: ${resultFour.completed}`
 
+    subFooter.appendChild(remove);
+
+
+
    newDivcenter.appendChild(para);
    newDivcenter.appendChild(paraTwo);
    newDivcenter.appendChild(paraThree);
    newDivcenter.appendChild(paraFour);
 
+   subFootertwo.innerHTML = `Book Id#:${resultTwo.pages}`
 
 
   }
