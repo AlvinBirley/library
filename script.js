@@ -13,18 +13,16 @@ let myLibrary = [
 
 ];
 
-/*OBJECT CONSTRUCTOR*/
-function Book (author, title, number, completed){
-    this.author = author;
-    this.title = title;
-    this.number = number;
-    this.completed = completed;
-}
-
-function book() {
+let remove = document.createElement('BUTTON');
+remove.classList.add("remove-class");
+remove.innerHTML = "Remove";
+const myButton = document.getElementsByClassName('remove-class');
 
 
-}
+const newDiv = document.createElement("div");
+newDiv.classList.add("border");
+
+
 
 function Object(author, title, pages, completed) {
     this.author = author;
@@ -104,7 +102,7 @@ function getValues (){
     paraThree.innerText = `Pages: ${resultThree.pages}`
     paraFour.innerText = `Completed: ${resultFour.completed}`
 
-    subFooter.appendChild(remove);
+    newDiv.appendChild(remove);
 
 
 
@@ -112,6 +110,8 @@ function getValues (){
    newDivcenter.appendChild(paraTwo);
    newDivcenter.appendChild(paraThree);
    newDivcenter.appendChild(paraFour);
+
+   let solution = resultTwo.pages
 
    subFootertwo.innerHTML = `Book Id#:${resultTwo.pages}`
 
@@ -125,6 +125,27 @@ getValues();
 
 
 
+function setup() {
+    let author = document.getElementById('inputValuename').value;
+    let resultTwo = myLibrary.find(item => item.author === author );
+    let solution = resultTwo.pages
+    var els = document.getElementsByClassName("remove-class");
+    for (var i = 0; i < els.length; i++) {
+        els[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            myLibrary.splice(myLibrary.findIndex(({pages}) => pages == solution), 1);
+            e.target.closest('div').remove();
+    
+        });
+    }
+}
+setup();
+
+
 
 document.querySelector('.bg-modal').style.display = 'none';
+
+
+
 })
+
